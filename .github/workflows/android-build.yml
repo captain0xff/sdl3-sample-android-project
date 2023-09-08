@@ -15,13 +15,12 @@ jobs:
       - name: Clone the repos
         run:  |
                git clone https://github.com/Ravbug/sdl3-sample.git
-               cd ./sdl3-sample
-               git clone https://github.com/Ravbug/sdl-android-builder.git
+               cd sdl3-sample
+               git clone https://github.com/Ravbug/sdl-android-builder.git sdl3-sample
 
       - name: Build the APK
         run: |
-              cd ./sdl3-sample
-              ls
+              cd ./sdl3-sample/android-project/app
               ./gradlew assembleDebug
 
       - name: Upload the APK
