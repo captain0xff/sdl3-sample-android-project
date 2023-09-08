@@ -21,7 +21,7 @@ jobs:
       - name: Build the APK
         run: |
               ls sdl3-sample
-              cd ./sdl3-sample/android-project/app
+              cd ./sdl3-sample/android-project
               ./gradlew assembleDebug
 
       - name: Upload the APK
