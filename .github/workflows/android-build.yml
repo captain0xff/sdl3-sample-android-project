@@ -12,6 +12,10 @@ jobs:
         with:
           submodules: true
 
+      - name: Install deps
+        run:  |
+               sudo apt install openjdk-17-jdk openjdk-17-jre
+
       - name: Clone the repos and copy the android-project
         run:  |
                git clone https://github.com/Ravbug/sdl3-sample.git
