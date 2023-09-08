@@ -22,6 +22,7 @@ jobs:
         run: |
               ls sdl3-sample
               cd ./sdl3-sample/android-project
+              chmod +x gradlew
               ./gradlew assembleDebug
 
       - name: Upload the APK
