@@ -16,7 +16,7 @@ jobs:
         run:  |
                git clone https://github.com/Ravbug/sdl3-sample.git
                git clone https://github.com/captain1947/sdl3-sample-android-project.git
-               cp sdl3-sample-android-project/android-project sdl3-sample/
+               cp -r sdl3-sample-android-project/android-project sdl3-sample/
 
       - name: Build the APK
         run: |
