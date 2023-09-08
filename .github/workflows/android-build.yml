@@ -15,6 +15,7 @@ jobs:
       - name: Install deps
         run:  |
                sudo apt install openjdk-17-jdk openjdk-17-jre
+               export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
 
       - name: Clone the repos and copy the android-project
         run:  |
