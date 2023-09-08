@@ -1,0 +1,3 @@
+[submodule "sdl3-sample"]
+	path = sdl3-sample
+	url = https://github.com/Ravbug/sdl3-sample.git
