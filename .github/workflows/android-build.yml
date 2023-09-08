@@ -17,7 +17,7 @@ jobs:
       - name: Build the APK
         run: |
               export JAVA_HOME=$JAVA_HOME_17_X64
-              cd ./sdl3-sample/android-project
+              cd sdl3-sample/android-project
               chmod +x gradlew
               ./gradlew assembleDebug
 
@@ -25,4 +25,4 @@ jobs:
         uses: actions/upload-artifact@v3
         with: 
           name: artifact
-          path: SDL/android-project/app/build/outputs/apk/debug/app-debug.apk
+          path: sdl3-sample/android-projectapp/build/outputs/apk/debug/app-debug.apk
