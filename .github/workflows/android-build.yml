@@ -20,6 +20,8 @@ jobs:
               cd sdl3-sample/android-project
               chmod +x gradlew
               ./gradlew assembleDebug
+              cd ../..
+              tree sdl3-sample
 
       - name: Upload the APK
         uses: actions/upload-artifact@v3
