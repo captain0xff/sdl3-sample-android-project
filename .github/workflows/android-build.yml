@@ -1,0 +1,30 @@
+name: Build Sample for Android
+
+on: push
+
+jobs:
+  apk:
+    name: Apk Build
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          submodules: true
+
+      - name: Clone the repos
+        run:  |
+               git clone https://github.com/Ravbug/sdl3-sample.git
+               cd sdl3-sample
+               git clone https://github.com/Ravbug/sdl-android-builder.git
+
+      - name: Build the APK
+        run: |
+              cd android-project/app
+              ./gradlew assembleDebug
+
+      - name: Upload the APK
+        uses: actions/upload-artifact@v3
+        with: 
+          name: artifact
+          path: SDL/android-project/app/build/outputs/apk/debug/app-debug.apk
