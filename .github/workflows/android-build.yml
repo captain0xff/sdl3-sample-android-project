@@ -19,10 +19,9 @@ jobs:
 
       - name: Build the APK
         run: |
-              ls sdl3-sample
+              export JAVA_HOME=$JAVA_HOME_17_X64
               cd ./sdl3-sample/android-project
               chmod +x gradlew
-              export JAVA_HOME="/usr/lib/jvm/jdk-17"
               ./gradlew assembleDebug
 
       - name: Upload the APK
