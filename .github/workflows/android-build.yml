@@ -11,11 +11,11 @@ jobs:
       - uses: actions/checkout@v3
         with:
           submodules: true
+          fetch-depth: 0
 
       - name: Build the APK
         run: |
               export JAVA_HOME=$JAVA_HOME_17_X64
-              tree .
               cd android-project/
               chmod +x ./gradlew
               ./gradlew assembleDebug
